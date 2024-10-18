@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(features = "src/test/java/features",
-        tags = "@LoyaltyOffer1.02",
+        tags = "@LoyaltyOffer1.01",
         glue = "stepDefinition",
         monochrome = true,
         plugin = {"html:target/cucumber.html", "json:target/cucumber.json",
