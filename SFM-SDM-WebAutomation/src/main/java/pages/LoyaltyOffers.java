@@ -70,11 +70,14 @@ public class LoyaltyOffers {
     WebElement minimumQuantityAmountRadioButton;
     @FindBy(css = "input[type='radio'][value='MINIMUM_SPEND_AMOUNT']")
     WebElement minimumSpendAmountRadioButton;
+    @FindBy(css = "input[type='radio'][value='PRODUCT_PURCHASE']")
+    WebElement productPurchaseRadioButton;
+
 
 
     @FindBy(css = "input#basket-level-id[type='radio']")
     WebElement basketOfferRadioButton;
-    @FindBy(css = "input[name='points_off']")
+    @FindBy(css = "input[name='points_off'], input[name='times_point']")
     WebElement pointsOfferInput;
     @FindBy(css = "input[name='dollar_spend']")
     WebElement dollarSpendInput;
@@ -228,6 +231,10 @@ public class LoyaltyOffers {
         pointsOfferInput.sendKeys(String.valueOf(pointsOfferValue));
     }
 
+    /**
+     * This method is related to Credit points.
+     * It selects the product offer and sets the Minimum quantity required condition.
+     */
     public void selectProductOfferAndSetMinimumQuantityCondition() {
         wait.until(ExpectedConditions.elementToBeClickable(productOfferRadioButton));
         if (!productOfferRadioButton.isSelected()) {
@@ -242,6 +249,10 @@ public class LoyaltyOffers {
         pointsOfferInput.sendKeys(String.valueOf(pointsOfferValue));
     }
 
+    /**
+     * This method is related to both Credit points & Points Multiplier.
+     * It selects the product offer and sets the Minimum spend required condition.
+     */
     public void selectProductOfferAndSetMinimumSpendCondition() {
         wait.until(ExpectedConditions.elementToBeClickable(productOfferRadioButton));
         if (!productOfferRadioButton.isSelected()) {
@@ -259,7 +270,30 @@ public class LoyaltyOffers {
         pointsOfferInput.sendKeys(String.valueOf(pointsOfferValue));
     }
 
+    /**
+     * This method is related to Points Multiplier.
+     * It selects the product offer and sets the product purchase condition.
+     */
+        public void selectProductOfferAndSetProductPurchaseCondition() {
+        wait.until(ExpectedConditions.elementToBeClickable(productOfferRadioButton));
+        if (!productOfferRadioButton.isSelected()) {
+            productOfferRadioButton.click();
+        }
 
+        wait.until(ExpectedConditions.elementToBeClickable(productPurchaseRadioButton)); // Updated line
+        if (!productPurchaseRadioButton.isSelected()) {
+            productPurchaseRadioButton.click();
+        }
+
+        wait.until(ExpectedConditions.visibilityOf(pointsOfferInput));
+        pointsOfferValue = random.nextInt(100) + 1;
+        pointsOfferInput.sendKeys(String.valueOf(pointsOfferValue));
+    }
+
+    /**
+     * This method is related to both Credit points & Points Multiplier.
+     * It selects the Basket level and sets the Spend and point conditions.
+     */
     public void selectBasketOfferAndSetValues() {
         wait.until(ExpectedConditions.elementToBeClickable(basketOfferRadioButton));
         if (!basketOfferRadioButton.isSelected()) {

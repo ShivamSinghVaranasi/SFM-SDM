@@ -55,6 +55,11 @@ public class LoyaltyStepDefinition {
         tcs.pom.getLoyaltyOffersPage().selectProductOfferAndSetMinimumSpendCondition();
     }
 
+    @And("I select the offer that applies at product level with Product Purchase Condition")
+    public void iSelectTheOfferThatAppliesAtProductLevelWithProductPurchaseCondition() {
+        tcs.pom.getLoyaltyOffersPage().selectProductOfferAndSetProductPurchaseCondition();
+    }
+
     @And("I select the offer that applies as basket level and set Offer conditions")
     public void iSelectTheOfferThatAppliesAsBasketLevelAndSetOfferConditions() {
         tcs.pom.getLoyaltyOffersPage().selectBasketOfferAndSetValues();
@@ -122,7 +127,6 @@ public class LoyaltyStepDefinition {
     public void iShouldSeeTheVoucherSuccessfullyCreated() {
         Assert.assertTrue(tcs.pom.getLoyaltyOffersPage().isVoucherCreated());
     }
-
 
 
 }
