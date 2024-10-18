@@ -315,8 +315,8 @@ Feature: Loyalty
     When I click the Create button
     Then I should see the voucher successfully created
 
-# TC-2.0: Minimum Quantity Required, Add Product Manually, All Customers, All Stores
-  @LoyaltyOffer2.01
+# TC-2.0: Product Purchase Condition, Add Product Manually, All Customers, All Stores
+  @LoyaltyOffer
   Scenario: Create a loyalty offer with Points Multiplier TC-2.0
     Given I am on the Promotions page and I click on Loyalty Offers
     When I select Shoppers Drug Mart as the store
@@ -332,7 +332,7 @@ Feature: Loyalty
     When I click the Create button
     Then I should see the voucher successfully created
 
-# TC-2.1: Minimum Quantity Required, Add Product Manually, All Customers, Specific Store ID
+# TC-2.1: Product Purchase Condition, Add Product Manually, All Customers, Specific Store ID
   @LoyaltyOffer
   Scenario: Create a loyalty offer with Points Multiplier TC-2.1
     Given I am on the Promotions page and I click on Loyalty Offers
@@ -349,7 +349,7 @@ Feature: Loyalty
     When I click the Create button
     Then I should see the voucher successfully created
 
-# TC-2.2: Minimum Quantity Required, Add Product Manually, Specific Customer Segments, All Stores
+# TC-2.2: Product Purchase Condition, Add Product Manually, Specific Customer Segments, All Stores
   @LoyaltyOffer
   Scenario: Create a loyalty offer with Points Multiplier TC-2.2
     Given I am on the Promotions page and I click on Loyalty Offers
@@ -366,7 +366,7 @@ Feature: Loyalty
     When I click the Create button
     Then I should see the voucher successfully created
 
-# TC-2.3: Minimum Quantity Required, Add Product Manually, Specific Customer Segments, Specific Store ID
+# TC-2.3: Product Purchase Condition, Add Product Manually, Specific Customer Segments, Specific Store ID
   @LoyaltyOffer
   Scenario: Create a loyalty offer with Points Multiplier TC-2.3
     Given I am on the Promotions page and I click on Loyalty Offers
