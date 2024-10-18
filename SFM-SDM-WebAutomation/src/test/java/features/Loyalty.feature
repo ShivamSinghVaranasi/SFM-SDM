@@ -43,7 +43,7 @@ Feature: Loyalty
 
 
 # TC-1.0: Minimum Quantity Required, Add Product Manually, All Customers, All Stores
-  @LoyaltyOffer
+  @LoyaltyOffer1.02
   Scenario: Create a loyalty offer with Credit Points TC-1.0
     Given I am on the Promotions page and I click on Loyalty Offers
     When I select Shoppers Drug Mart as the store

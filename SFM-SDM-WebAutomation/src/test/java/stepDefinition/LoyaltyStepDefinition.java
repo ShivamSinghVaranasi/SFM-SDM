@@ -19,13 +19,6 @@ public class LoyaltyStepDefinition {
         this.tcs = tcs;
     }
 
-    @Given("abc")
-    public void givenScenario(DataReader dataReader) {
-        String row1Value = Common.dataExtractorFromSheet(dataReader, "HeadingName1");
-        System.out.println("Given - :"+row1Value);
-
-    }
-
 
     @Given("I am on the Promotions page and I click on Loyalty Offers")
     public void iAmOnThePromotionsPageAndIClickOnLoyaltyOffers() {

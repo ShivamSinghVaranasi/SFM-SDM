@@ -16,8 +16,6 @@ public class MyStepdefs {
     }
     @Given("Given Scenario")
     public void givenScenario(DataReader dataReader) {
-        String row1Value = Common.dataExtractorFromSheet(dataReader, "HeadingName1");
-        System.out.println("Given - :"+row1Value);
 
     }
 
@@ -31,8 +29,6 @@ public class MyStepdefs {
 
     @Then("Then Scenario")
     public void thenScenario(DataReader dataReader) {
-        String row1Value = Common.dataExtractorFromSheet(dataReader, "HeadingName1");
-        System.out.println("Then - :"+row1Value);
         Assert.assertTrue(true);
     }
 
